@@ -1,0 +1,343 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #333333;
+    background: white;
+}
+a {
+    text-decoration: none;
+    color: #333333;
+    display: block;
+}
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+}
+:root {
+    --main-clr: blue;
+    --sub-clr: #add8e6;
+}
+button {
+    cursor: pointer;
+}
+
+
+/*기본지정*/
+#whole-wrap {
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+}
+header {
+    width: 100%;
+    height: 100px;
+}
+main {
+    width: 100%;
+    height: 500px;
+}
+footer {
+    width: 100%;
+    height: 100px;
+}
+
+/*header*/
+header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+}
+header > h1 {
+    width: 180px;
+    height: 100%;
+}
+header > h1 > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header > h1 > a > img {
+    width: 100%;
+}
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    position: relative;
+}
+nav > ul {
+    position: relative;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+nav > ul > li{
+    width: 25%;
+    flex-shrink: 0;
+    text-align: center;
+    background: var(--sub-clr);
+    z-index: 10; 
+    position: relative;
+
+}
+nav > ul > li:hover {
+    background: var(--main-clr);
+}
+nav > ul > li > a {
+    padding: 3px 0;
+    color: white;
+    border: 1px solid #333333;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    line-height: 40px;
+}
+nav > ul > li:last-child > a{
+    border-right: 1px solid #333333;
+}
+nav > ul > li > ul {
+    background: white;
+    display: none;
+}
+nav > ul > li > ul > li > a {
+    padding: 3px 0;
+}
+nav > ul > li > ul > li > a:hover {
+    background: var(--main-clr);
+    color: white;
+}
+
+/*main*/
+main {
+    display: flex;
+    flex-direction: column;
+}
+#main1 {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+#main1 > ul {
+    width: calc(1200px * 3);
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    position: relative;
+    transition: transform .5s ease-in-out;
+}
+#main1 > ul > li {
+    flex-shrink: 0;
+    height: 100%;
+    width: 1200px;
+    position: relative;
+}
+#main1 > ul > li > a {
+    height: 100%;
+    width: 100%;
+}
+#main1 > ul > li > div {
+    font-size: 21px;
+    background: var(--sub-clr);
+    color: white;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 0;
+    gap: 1rem;
+    justify-content: center;
+    border-radius: 12px;
+    font-weight: bold;
+}
+#main1 > ul > li > div > span {
+    color: var(--main-clr);
+    font-weight: bold;
+    font-size: 21px;
+}
+#main1 > ul > li > a > img {
+    height: 100%;
+    width: 100%
+}
+
+/*main2*/
+#main2 {
+    display: flex;
+    padding: 10px 0px;
+    background: var(--sub-clr);
+}
+.main2Article {
+    width: 400px;
+    flex-shrink: 0;
+    padding: 10px;
+    max-height: 200px;
+}
+.main2Article > h2 {
+    font-size: 24px;
+    padding: 2px 5px;
+    width: 120px;
+    border-radius: 12px 12px 0 0;
+    background: var(--main-clr);
+    text-align: center;
+    color: white;
+}
+.firstArticle > ul,
+.secArticle > ul,
+.trdArticle > ul {
+    padding: 10px;
+    background: var(--main-clr);
+    border-radius: 0 10px 10px 10px;
+}
+.firstArticle > ul > li > a {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 14px;
+    padding: 5px 0;
+}
+.firstArticle > ul > li > a:hover {
+    color: var(--sub-clr);
+}
+.secArticle > ul,
+.trdArticle > ul {
+    display: flex;
+    height: 140px;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.secArticle > ul > li > a {
+    transition: opacity .3s ease;
+}
+.secArticle > ul > li > a:hover {
+    opacity: .6;
+}
+.trdArticle > ul > li > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.trdArticle > ul > li > a > span {
+    font-size: 14px;
+    color: white;
+}
+
+/*footer*/
+footer {
+    display: flex;
+    background: #628a97
+}
+footer > div:first-child {
+    width: 20%;
+    height: 100%;
+}
+footer > div:nth-child(2) {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer > div:last-child {
+    width: 20%;
+    height: 100%;
+}
+footer > div:first-child > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer > div:nth-child(2) > p{
+    padding: .25rem .625rem;
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+}
+footer > div:last-child > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+footer > div:last-child > ul > li > a {
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer > div:last-child > ul > li:first-child > a {
+    background: blue;
+}
+footer > div:last-child > ul > li:nth-child(2) > a {
+    background: green;
+}
+footer > div:last-child > ul > li:last-child > a {
+    background: red;
+}
+
+
+/*모달*/
+#modal {
+    width: 600px;
+    height: 400px;
+    background: lightblue;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-top: 100px;
+    transform: translateX(-50%);
+    display: none;
+}
+#modal > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+#modal > div > p {
+    white-space: pre-line;
+    text-align: center;
+}
+#modal > div > p > span {
+    text-align: center;
+    font-weight: bold;
+}
+#modal button {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    padding: .325rem 1.25rem;
+    background: white;
+    border: 1px solid var(--main-clr);
+    border-radius: .325rem;
+}
+#modal button:hover {
+    background: var(--main-clr);
+    color: white;
+}

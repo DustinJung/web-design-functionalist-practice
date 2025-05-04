@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글로벌투어스 홈페이지</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/script.js" type="module"></script>
+</head>
+<body>
+    <div id="whole-wrap">
+        <header>
+            <h1><a href="#"><img src="images/logo.png" alt="글로벌투어스 로고" width="180" height="40"></a></h1>
+            <nav id="nav">
+                <ul>
+                    <li>
+                        <a href="#">홈</a>
+                        <ul class="subNav">
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">CEO인사말</a></li>
+                            <li><a href="#">회사비전</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">여행지</a>
+                        <ul class="subNav">
+                            <li><a href="#">아시아</a></li>
+                            <li><a href="#">유럽</a></li>
+                            <li><a href="#">북미</a></li>
+                            <li><a href="#">기타지역</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">투어</a>
+                        <ul class="subNav">
+                            <li><a href="#">패키지 투어</a></li>
+                            <li><a href="#">맞춤형 투어</a></li>
+                            <li><a href="#">테마 투어</a></li>
+                            <li><a href="#">당일치기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="subNav">
+                            <li><a href="#">이용후기</a></li>
+                            <li><a href="#">갤러리</a></li>
+                            <li><a href="#">문의하기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="main1">
+                <ul id="slideUl">
+                    <li>
+                        <a href="#"><img src="images/s1.jpg" alt="메인 슬라이드1"></a>
+                        <div>글로버투어스<span>슬라이드1</span></div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/s2.jpg" alt="메인 슬라이드2"></a>
+                        <div>글로버투어스<span>슬라이드2</span></div>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/s3.jpg" alt="메인 슬라이드3"></a>
+                        <div>글로버투어스<span>슬라이드3</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div id="main2">
+                <article class="main2Article firstArticle">
+                    <h2>공지사항</h2>
+                    <ul>
+                        <li><a href="#">글로버투어스 공지사항 1 <span>2025.05.25</span></a></li>
+                        <li><a href="#">글로버투어스 공지사항 2 <span>2025.05.25</span></a></li>
+                        <li><a href="#">글로버투어스 공지사항 3 <span>2025.05.25</span></a></li>
+                        <li><a href="#">글로버투어스 공지사항 4 <span>2025.05.25</span></a></li>
+                    </ul>
+                </article>
+                <article class="main2Article secArticle">
+                    <h2>갤러리</h2>
+                    <ul>
+                        <li><a href="#"><img src="images/g1.jpg" alt="갤러리 이미지1" width="80" height="80"></a></li>
+                        <li><a href="#"><img src="images/g2.jpg" alt="갤러리 이미지2" width="80" height="80"></a></li>
+                        <li><a href="#"><img src="images/g3.jpg" alt="갤러리 이미지3" width="80" height="80"></a></li>
+                    </ul>
+                </article>
+                <article class="main2Article trdArticle">
+                    <h2>바로가기</h2>
+                    <ul>
+                        <li><a href="#"><img src="images/icon01.png" alt="바로가기 이미지1" width="60" height="60"><span>바로가기1</span></a></li>
+                        <li><a href="#"><img src="images/icon02.png" alt="바로가기 이미지2" width="60" height="60"><span>바로가기2</span></a></li>
+                        <li><a href="#"><img src="images/icon03.png" alt="바로가기 이미지3" width="60" height="60"><span>바로가기3</span></a></li>
+                    </ul>
+                </article>
+            </div>
+        </main>
+        <footer>
+            <div><a href="#"><img src="images/graylogo.png" alt="그레이스케일 푸터 로고" width="180" height="40"></a></div>
+            <div><p>COPYRIGHT © by WEB DESIGN DEVELOPMENT. ALL RIGHTS RESERVED.</p></div>
+            <div>
+                <ul>
+                    <li><a href="#"><img src="images/sns1.png" alt="푸터 sns 이미지1" width="8" height="11"></a></li>
+                    <li><a href="#"><img src="images/sns2.png" alt="푸터 sns 이미지1" width="8" height="11"></a></li>
+                    <li><a href="#"><img src="images/sns3.png" alt="푸터 sns 이미지1" width="15" height="11"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <div id="modal">
+        <div>
+            <h2>제목: 글로버투어스 공지사항</h2>
+            <img src="images/pop.jpg" alt="글로버투어스팝업 이미지" width="400" height="200">
+            <p>글로버 투어스 공지사항
+                팝업창 내용입니다.
+            <span>강조하고 싶을 부분은 강조해주세요!</span></p>
+        </div>
+        <button class="theBtn">닫기</button>
+    </div>
+</body>
+</html>
