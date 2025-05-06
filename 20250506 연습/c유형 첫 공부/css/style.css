@@ -1,0 +1,409 @@
+:root {
+    --main-clr: #0e0e7c;
+    --sub-clr: #ebeb66;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    color: #333;
+    background: #fff;
+}
+a {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    max-width: 100%;
+}
+button {
+    cursor: pointer;
+}
+
+/*전체*/
+#whole-wrapper {
+    width: 1000px;
+    height: 670px;
+    margin: 0 auto 0 0;
+    display: flex;
+    position: relative;
+}
+
+/*헤더*/
+header {
+    width: 300px;
+    height: 670px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    background: var(--main-clr);
+}
+header > h1 {
+    width: 300px;
+    height: 100px;
+    border-bottom: 3px solid var(--sub-clr);
+}
+header > h1 > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header > nav {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+}
+header > nav > ul {
+    width: 100%;
+    position: relative;
+}
+header > nav > ul > li {
+    position: relative;
+    width: 100%;
+    transition: background-color .3s ease;
+}
+header > nav > ul > li > a {
+    width: 100%;
+    font-size: 24px;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--sub-clr);
+    transition: color .3s ease;
+}
+header > nav > ul > li:hover {
+    background: #2828ea;
+}
+header > nav > ul > li:hover > a {
+    color: #ffffff; 
+}
+header > nav > ul > li > ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 180px; 
+    opacity: 0;
+    transition: opacity .3s ease, transform .65s ease;
+    touch-action: none;
+    cursor: none;
+    pointer-events: none;
+}
+header > nav > ul > li > ul.active {
+    touch-action: auto;
+    cursor: auto;
+    pointer-events: initial;
+    transform: translateX(100%);
+    opacity: 1;
+}
+header > nav > ul > li > ul > li {
+    width: 100%;
+    background: var(--main-clr);
+}
+header > nav > ul > li > ul > li > a {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--sub-clr);
+    transition: color .3s ease, background-color .3s ease;
+    position: relative;
+}
+header > nav > ul > li > ul > li > a:hover {
+    color: #ffffff;
+    background: #2828ea;
+}
+
+/*main*/
+main {
+    width: 700px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+}
+#slide {
+    overflow: hidden;
+    width: 100%;
+    height: 350px;
+}
+#slide > ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(350px * 3);
+    transition: transform .5s ease;
+}
+#slide > ul > li {
+    flex-shrink: 0;
+    width: 100%;
+    height: 350px;
+}
+#slide > ul > li > a {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#slide > ul > li > a > img {
+    width: 100%;
+    height: 100%;
+}
+#slide > ul > li > a > span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 1.625rem;
+    color: var(--sub-clr);
+    background: #0e0e7c95;
+    border-radius: 1rem;
+}
+
+/*트리오*/
+#treeo {
+    width: 1000px;
+    height: 200px;
+    display: flex;
+    overflow: hidden;
+}
+#treeo > article {
+    padding: 10px;
+}
+#treeo > article > h2 {
+    font-size: 21px;
+    background: var(--main-clr);
+    width: 120px;
+    text-align: center;
+    border-radius: 0rem 1rem 0 0;
+    color: var(--sub-clr);
+    height: 40px;
+    line-height: 42px;
+}
+
+
+/*노티스*/
+#notice {
+    width: 250px;
+    height: 100%;
+}
+#notice > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%;
+    background: var(--main-clr);
+    border-radius: 0 1rem 1rem;
+    height: 140px;
+}
+#notice > ul > li > a {
+    display: flex;
+    padding: 5px 0;
+    border-bottom: 1px dashed #fff;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--sub-clr);
+    transition: color .3s ease;
+}
+#notice > ul > li > a:hover {
+    color: #fff;
+}
+
+
+/*갤러리*/
+#gallery {
+    width: 250px;
+    height: 100%;
+}
+
+#gallery > ul {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    background: var(--main-clr);
+    border-radius: 0 1rem 1rem;
+    height: 140px;
+}
+#gallery > ul > li {
+    width: 33.33333333333333%;
+}
+#gallery > ul > li > a {
+    width: 100%;
+    padding: 10px
+}
+#gallery > ul > li > a > img {
+    width: 70px;
+    height: 100px;
+}
+
+/*바로가기*/
+#rightGo {
+    width: 200px;
+    height: 100%;
+}
+
+#rightGo > ul {
+    display: flex;
+    padding: 10px;
+    width: 100%;
+    background: var(--main-clr);
+    border-radius: 0 1rem 1rem;
+    height: 140px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#rightGo > ul > li > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#rightGo > ul span {
+    font-size: 11px;
+    color: var(--sub-clr);
+}
+
+/*푸터*/
+
+footer {
+    width: 100%;
+    height: 120px;
+    display: flex;
+}
+footer > #copyright {
+    width: 500px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--main-clr);
+}
+footer > #copyright > p {
+    color: var(--sub-clr);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/*sns*/
+#sns {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--main-clr);
+}
+#sns-wrapper {
+    height: 50%;
+    width: 100%;
+}
+#sns-wrapper > ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+#sns-wrapper > ul > li > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+#sns-wrapper > ul > li > a > span {
+    font-size: 11px;
+    color: var(--sub-clr);
+}
+
+
+#family {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*modal*/
+#real-modal {
+    width: 700px;
+    height: 500px;
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    margin-top: 80px;
+    z-index: 1000;
+
+}
+#modal {
+    width: 700px;
+    height: 500px;
+    display: flex;
+    background: var(--main-clr);
+    border: 1px solid var(--sub-clr);
+    color: var(--sub-clr);
+}
+#modal-logo-wrapper {
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid var(--sub-clr);
+    background: var(--main-clr);
+}
+#modal-logo-wrapper > h2 {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid var(--sub-clr);
+}
+#modal-logo-wrapper > h2 > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#modal-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    flex-direction: column;
+    width: 100%;
+}
+#modal-wrap > h2 {
+    font-size: 32px;
+    padding: 10px;
+}
+#modal-wrap > p {
+    white-space: pre-line;
+    font-size: 21px;
+    text-align: center;
+    font-weight: 400;
+}
+#modal-wrap > p > span {
+    font-weight: bold;
+    color: #fff;
+}
+#real-modal button {
+    background: var(--main-clr);
+    color: var(--sub-clr);
+    font-size: 16px;
+    padding: .5rem 1rem;
+    border: 1px solid var(--sub-clr);
+    font-weight: 600;
+    border-radius: .325rem;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}
